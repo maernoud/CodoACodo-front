@@ -2,4 +2,7 @@
 
 header{background-color: red;}
 
-nav{background-color: blue;}
+nav{display: flex; flex-flow: row wrap;}
+
+
+
