@@ -1,24 +1,56 @@
+:root{
+  --ColorHeaderBackground: #111;
+  --ColorHeaderFont: #EEE;
+  --ColorMenuFont: #0CC;
+  --ColorMenuFontActivo: #0EE;
+}
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: ease-in 0.3s all;
 }
 
 header, footer{
-  background-color: #111; 
-  color:#EEE;
+  background-color: var(--ColorHeaderBackground);
+  color: var(--ColorHeaderFont);
 
   display: flex; 
   flex-flow: row wrap;
   justify-content:space-between;
 }
 
-header img{width: 10%; min-width: 80px; margin: 10px;}
+header{text-align: center;}
 
-header>div{width: 86%; }
+header img{
+  width: 10vw; 
+  height: 10vw; 
+  /*
+   min-width: 80px;
+   min-height: 80px;  
+  */
+  margin: 10px;
+}
 
-header h1{text-align: center;}
+.titulo{order:3;}
+.titulo>h1{
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content:space-around;
+}
+.subTitulo{font-size: 200%;}
+
+.redes{
+  order:2;
+  display:flex; 
+  flex-flow:row wrap;
+  
+  margin: 2px; 
+  color: var(--ColorHeaderFont);
+  transform: scale(0.8);
+}
 
 header nav{
   display: flex; 
@@ -26,14 +58,28 @@ header nav{
   justify-content:space-around;
 }
 
-header nav li{list-style-type: none; margin: 10px;}
-
-header nav a{text-decoration: none;}
-
 header nav ul{
   display: flex; 
   flex-flow: row wrap; 
   justify-content:space-around;
+}
+
+header nav li{
+  list-style-type: none; 
+  padding: 10px;
+  color: var(--ColorMenuFont);
+}
+
+header nav li:hover{
+  transform: scale(1.2);
+  font-weight: bolder;
+  padding: 10px 20px;
+  color: var(--ColorMenuFontActivo);
+}  
+
+header nav a{
+  text-decoration: none;
+  color: inherit;
 }
 
 section{
@@ -44,19 +90,33 @@ section{
   padding: 3%;
 }
 
+@media (min-width:400px){
+  header h1{font-size: 1.75rem;}
+  header nav{font-size: 0.75rem;}
+  .titulo{margin: auto;}
+}
+
+@media (min-width:600px){
+  header h1{font-size: 1.75rem;}
+  header nav{font-size: 1rem;}
+  .titulo{order:2;}
+  .redes{order:3; flex-flow:column wrap; align-items:center;}
+}
+
 @media (min-width:800px){
   header h1{font-size: 2.5rem;}
   header nav{font-size: 1.25rem;}
+  .redes{margin: 4px; transform: scale(0.9);}
 }
-@media (min-width:1000px){
-  header h1{font-size: 3rem;}
-  header nav{font-size: 1.5rem;}
-}
-@media (min-width:1200px){
-  header h1{font-size: 3.5rem;}
+
+@media (min-width:1100px){
+  header h1{font-size: 3.25rem;}
   header nav{font-size: 1.75rem;}
+  .redes{margin: 6px; transform: scale(1.1);}
 }
+
 @media (min-width:1400px){
   header h1{font-size: 4rem;}
   header nav{font-size: 2rem;}
+  .redes{margin: 7px; transform: scale(1.1);}
 }
