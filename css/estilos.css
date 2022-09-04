@@ -90,6 +90,16 @@ section{
   padding: 3%;
 }
 
+#AcercaDe::first-line{
+  background-color: blue;
+  }
+
+#AcercaDe{
+  color: red;
+  /* color: aqua; */
+  
+}
+
 @media (min-width:400px){
   header h1{font-size: 1.75rem;}
   header nav{font-size: 0.75rem;}
