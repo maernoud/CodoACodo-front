@@ -73,11 +73,22 @@ header nav a{
 }
 
 section{
-  height: 100px; 
   border: 2px dashed gray;
   border-radius: 30px;
   text-align: center;
   padding: 3%;
+}
+
+
+
+#AcercaDe{
+  
+  color: black;
+ 
+}
+
+#AcercaDe p {
+  font-family: 'Playfair Display', serif;
 }
 
 @media (min-width:400px){
