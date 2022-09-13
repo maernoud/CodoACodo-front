@@ -383,14 +383,8 @@ Manuel estas parecen ser declaraciones globales, si estas de acuerdo las sivirí
 /* Aca terminan los estilos del carousel */
 
 
-#AcercaDe{
-  
-  color: black;
- 
-}
-
 #AcercaDe p {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 @media (max-width:1000px){
