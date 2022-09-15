@@ -227,7 +227,8 @@ Manuel estas parecen ser declaraciones globales, si estas de acuerdo las sivirí
 
 .carousel {
   position: relative;
-  
+  margin: auto 1rem;
+  max-height: 75%;
   padding-top: 75%;
   filter: drop-shadow(0 0 10px #0003);
   perspective: 100px;
@@ -249,14 +250,12 @@ Manuel estas parecen ser declaraciones globales, si estas de acuerdo las sivirí
 .carousel__slide {
   position: relative;
   flex: 0 0 100%;
-  width: 100%;
-  /* background-color: #f99; */
+  width: 90%;
+ 
   counter-increment: item;
 }
 
-/* .carousel__slide:nth-child(even) {
-  background-color: #99f;
-} */
+
 
 .carousel__slide:before {
   content: counter(item);
@@ -299,7 +298,7 @@ Manuel estas parecen ser declaraciones globales, si estas de acuerdo las sivirí
 
 .carousel_img{
   width: 100%;
-
+  max-height: 90%;
 
 }
 .carousel:hover .carousel__snapper,
@@ -318,6 +317,7 @@ Manuel estas parecen ser declaraciones globales, si estas de acuerdo las sivirí
 .carousel__navigation-list,
 .carousel__navigation-item {
   display: inline-block;
+  
 }
 
 .carousel__navigation-button {
@@ -380,7 +380,7 @@ Manuel estas parecen ser declaraciones globales, si estas de acuerdo las sivirí
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
 }
 
-/* Aca terminan los estilos del carousel */
+/* Fin estilos  carousel */
 
 
 #AcercaDe{
@@ -392,6 +392,51 @@ Manuel estas parecen ser declaraciones globales, si estas de acuerdo las sivirí
 #AcercaDe p {
   font-family: 'Playfair Display', serif;
 }
+
+
+/* Estilos Formulario */
+
+.formulario{
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.formulario input {
+  width: 90%;
+  height: 30px;
+  margin: 0.5rem;
+  background-color:#e2d8b9
+}
+
+.formulario textarea {
+  width: 90%;
+  margin: 0.5rem;
+  background-color:#e2d8b9
+}
+
+.btn{
+  color: var(--Ocre);
+  border: 2px solid var(--Verde);
+  border-radius: 6px;
+  padding: 16px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+
+
+/* Fin estilos forumlario */
+
+
 
 @media (max-width:1000px){
   .header__menu{flex-flow:column wrap; align-items:end; font-size: 85%;}
