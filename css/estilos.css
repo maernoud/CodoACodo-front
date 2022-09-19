@@ -126,8 +126,9 @@ header img{
 /*
 Manuel agrego seteo en 88vh la seccion #Inicio dado que el TopBar ocupa 12vh y con 88vh entiendo siempre se vería el carrousel completo.
 */
+/* Comento la altura para que tome la optima solo y no quede espacio de sobra*/
 #Inicio{
-  height: 88vh;
+  /*height: 88vh;*/
 }
 
 /* Aca van los estilos del carousel */
@@ -383,8 +384,38 @@ Manuel estas parecen ser declaraciones globales, si estas de acuerdo las sivirí
 /* Fin estilos  carousel */
 
 
-#AcercaDe p {
+#AcercaDe div p {
   font-family: 'Roboto', sans-serif;
+}
+
+
+@media (min-width:780px){
+  #AcercaDe {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #AcercaDeVideo {
+    width: 50%;
+    height: 100vh;
+    text-align: center;
+    color: white;
+    padding: 0 10px 0 10px;
+  }
+
+  #AcercaDeVideo iframe {
+    height: 100%;
+    width: 100%;
+  }
+
+  #AcercaDeTexto {
+    width: 50%;
+    padding: 30px;
+    height: 80vh;
+    border: #596A40 solid 5px;
+    margin: 50px;
+    overflow: auto;
+  }
 }
 
 
