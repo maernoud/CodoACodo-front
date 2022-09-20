@@ -1,6 +1,7 @@
 /********************************************/
 /* INICIO VARIABLES Y DEFINICIONES GLOBALES */
 /********************************************/
+
 :root{
   --AltoTopBar:max(12vh, 80px);
   --AltoFooter:max(8vh, 53px);
@@ -8,21 +9,23 @@
   --Ocre:#DDAC1D;
   --Ciena:#E2DBCF;
 /* Manuel hay que chequear con la Diseñadora: 
+
    1.- Si le parece bien iluminar la opción de menú en el Hover
    2.- Creé el efecto de iluminación sumando 2 a cada hexa del RGB Ciena (#E2DBCF -> #E4DDD2)
 */
-  --CienaIluminado: #E4DDD2; 
-  --ColorMenuFont:var(--Ciena);
-  --ColorMenuFontActivo:var(--CienaIluminado);
+  --CienaIluminado: #E4DDD2;
+  --ColorMenuFont: var(--Ciena);
+  --ColorMenuFontActivo: var(--CienaIluminado);
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   transition: ease-in 0.1s all;
   font-family: 'Roboto';
 }
+
 /********************************************/
 /* FIN VARIABLES Y DEFINICIONES GLOBALES    */
 /********************************************/
@@ -30,14 +33,17 @@
 /**************************************/
 /* INICIO: GRANDES SECCIONES DEL BODY */
 /**************************************/
-body{min-width: 320px;}
+body {
+  min-width: 320px;
+}
 
-header, footer{
+header,
+footer {
   background-color: var(--Verde);
   color: var(--Ciena);
 }
 
-header{
+header {
   position: fixed;
   top: 0;
   width: 100%;
@@ -46,18 +52,22 @@ header{
   padding: 2px;
   z-index: 99;
 
-  display: flex; 
+  display: flex;
   flex-flow: row wrap;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
 }
 
 main {
+
+
+
   margin-top: var(--AltoTopBar); /* Para que no lo tape la TopBar que mide 12vh y siempre en Top:0 */
-  
+
   background-color: var(--Ciena);
   color: var(--Verde);
 }
+
 
 footer{
   height: var(--AltoFooter);
@@ -73,6 +83,7 @@ footer{
 /* INICIO: GRANDES SECCIONES DEL BODY */
 /**************************************/
 
+
 header img{
   content: url(../img/logoTexto.png); 
   height: calc(var(--AltoTopBar) - 6px);
@@ -84,8 +95,10 @@ header img{
   height: calc(var(--AltoTopBar) - 6px);
   padding: 0px 10px;
 
-  display: flex; 
+
+  display: flex;
   flex-flow: row wrap;
+
   justify-content:end;
   align-items:center;
 
@@ -96,36 +109,41 @@ header img{
   order:1;
   font-size: 120%;
   margin-right: 14px;
+
 }
 
-.header__menu nav ul{
-  display: flex; 
-  flex-flow: row wrap; 
-  justify-content:space-around;
-} 
+.header__menu nav ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
 
 .header__menu nav li{
   list-style-type: none; 
   padding: 10px 15px;
+
   color: var(--ColorMenuFont);
 }
 
-.header__menu nav li:hover{
+.header__menu nav li:hover {
   transform: scale(1.2);
   font-weight: bolder;
   color: var(--ColorMenuFontActivo);
 }
 
-.header__menu nav a{
+.header__menu nav a {
   text-decoration: none;
   color: inherit;
 }
 
+
 .header__menu__redes{
   order:3;
+
 }
 
-.header__menu__redes i{
+.header__menu__redes i {
   color: var(--Ciena);
   transform: scale(1.2);
   padding: 5px;
@@ -139,7 +157,8 @@ Manuel agrego seteo en 88vh la seccion #Inicio dado que el TopBar ocupa 12vh y c
 #Inicio{
   height: 88vh;
 } 
-*/
+
+
 
 /* Aca van los estilos del carousel */
 
@@ -147,12 +166,15 @@ Manuel agrego seteo en 88vh la seccion #Inicio dado que el TopBar ocupa 12vh y c
   75% {
     left: 0;
   }
+
   95% {
     left: 100%;
   }
+
   98% {
     left: 100%;
   }
+
   99% {
     left: 0;
   }
@@ -162,12 +184,15 @@ Manuel agrego seteo en 88vh la seccion #Inicio dado que el TopBar ocupa 12vh y c
   75% {
     left: 0;
   }
+
   95% {
     left: -300%;
   }
+
   98% {
     left: -300%;
   }
+
   99% {
     left: 0;
   }
@@ -177,12 +202,15 @@ Manuel agrego seteo en 88vh la seccion #Inicio dado que el TopBar ocupa 12vh y c
   96% {
     scroll-snap-align: center;
   }
+
   97% {
     scroll-snap-align: none;
   }
+
   99% {
     scroll-snap-align: none;
   }
+
   100% {
     scroll-snap-align: center;
   }
@@ -203,7 +231,8 @@ DESDE ACA:
 
 * {
   box-sizing: border-box;
-  scrollbar-color: transparent transparent; /* thumb and track color */
+  scrollbar-color: transparent transparent;
+  /* thumb and track color */
   scrollbar-width: 0px;
 }
 
@@ -224,10 +253,11 @@ DESDE ACA:
   -ms-overflow-style: none;
 }
 
-ol, li {
+ol,
+li {
   list-style: none;
-  margin: 0,30rem,0;
-  padding: 0,30rem,0;
+  margin: 0, 30rem, 0;
+  padding: 0, 30rem, 0;
 }
 
 /* 
@@ -262,7 +292,7 @@ Manuel estas parecen ser declaraciones globales, si estas de acuerdo las sivirí
   position: relative;
   flex: 0 0 100%;
   width: 90%;
- 
+
   counter-increment: item;
 }
 
@@ -273,7 +303,7 @@ Manuel estas parecen ser declaraciones globales, si estas de acuerdo las sivirí
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate3d(-50%,-40%,70px);
+  transform: translate3d(-50%, -40%, 70px);
   color: #fff;
   font-size: 2em;
 }
@@ -307,11 +337,12 @@ Manuel estas parecen ser declaraciones globales, si estas de acuerdo las sivirí
 }
 
 
-.carousel_img{
+.carousel_img {
   width: 100%;
   max-height: 90%;
 
 }
+
 .carousel:hover .carousel__snapper,
 .carousel:focus-within .carousel__snapper {
   animation-name: none;
@@ -328,7 +359,7 @@ Manuel estas parecen ser declaraciones globales, si estas de acuerdo las sivirí
 .carousel__navigation-list,
 .carousel__navigation-item {
   display: inline-block;
-  
+
 }
 
 .carousel__navigation-button {
@@ -393,8 +424,64 @@ Manuel estas parecen ser declaraciones globales, si estas de acuerdo las sivirí
 
 /* Fin estilos  carousel */
 
+
+
+
+
+
+
+#AcercaDe__Video {
+  
+  width: 100vw;
+  /* height: 100vh; */
+  /* text-align: center; */
+  /* color: white; */
+  padding: 10px 10px;
+}
+
+#AcercaDe__Video iframe {
+  height: 100%;
+  width: 100%;
+}
+
+#AcercaDe__Texto {
+  
+  width: 90vw;
+  padding: 10px;
+  height: 80vh;
+  border: var(--Verde) solid 5px;
+  margin: 10px 20px;
+  overflow: auto;
+  text-align: center;
+}
+
+
+@media (min-width:780px) {
+  #AcercaDe {
+    display: flex;
+    flex-direction: row;
+    height: 80vh;
+  }
+
+  #AcercaDe__Video {
+    width: 60%;
+
+  }
+
+  #AcercaDe__Texto {
+    width: 40%;
+    height: 100%;
+  }
+}
+
+
+
+
+
 /* Estilos Formulario */
-.formulario{
+
+.formulario {
+
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
@@ -408,16 +495,16 @@ Manuel estas parecen ser declaraciones globales, si estas de acuerdo las sivirí
   width: 90%;
   height: 30px;
   margin: 0.5rem;
-  background-color:#e2d8b9
+  background-color: #e2d8b9
 }
 
 .formulario textarea {
   width: 90%;
   margin: 0.5rem;
-  background-color:#e2d8b9
+  background-color: #e2d8b9
 }
 
-.btn{
+.btn {
   color: var(--Ocre);
   border: 2px solid var(--Verde);
   border-radius: 6px;
@@ -430,6 +517,7 @@ Manuel estas parecen ser declaraciones globales, si estas de acuerdo las sivirí
   text-transform: uppercase;
 }
 /* Fin estilos forumlario */
+
 
 /********************************************/
 /* SETEOS para el COMPORTAMIENTO RESPONSIVE */
@@ -451,17 +539,26 @@ Manuel estas parecen ser declaraciones globales, si estas de acuerdo las sivirí
 @media (max-width:510px){
   .header__menu{font-size: 65%; padding: 2px 0px;}
   header img{padding: 2px 10px 2px 2px;}
+
 }
 
-@media (max-width:400px){
-  .header__menu{font-size: 55%; padding: 2px 0px;}
-  header img{padding: 2px 1px 2px 0px;}
-  .header__menu nav li{padding: 5px;}
-  .header__menu nav li:hover{
+@media (max-width:400px) {
+  .header__menu {
+    font-size: 55%;
+    padding: 2px 0px;
+  }
+
+  header img {
+    padding: 2px 1px 2px 0px;
+  }
+
+  .header__menu nav li {
+    padding: 5px;
+  }
+
+  .header__menu nav li:hover {
     transform: scale(1.1);
     font-weight: bolder;
     padding: 5px 10px;
   }
 }
-
-
