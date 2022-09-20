@@ -125,10 +125,13 @@ header img{
 
 /*
 Manuel agrego seteo en 88vh la seccion #Inicio dado que el TopBar ocupa 12vh y con 88vh entiendo siempre se vería el carrousel completo.
-*/
+
+19-Sep: CS pone comentario como sugerencia de FD
+
 #Inicio{
   height: 88vh;
-}
+} 
+*/
 
 /* Aca van los estilos del carousel */
 
