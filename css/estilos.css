@@ -22,7 +22,18 @@
   box-sizing: border-box;
   transition: ease-in 0.1s all;
   font-family: 'Roboto';
+
+  /* Para ocultar las barras de Scroll */
+  scrollbar-color: transparent transparent; /* thumb and track color */
+  scrollbar-width: 0px;
+  -ms-overflow-style: none;
 }
+
+  /* Para ocultar las barras de Scroll */
+*::-webkit-scrollbar{width: 0;}
+*::-webkit-scrollbar-track{background: transparent;}
+*::-webkit-scrollbar-thumb{background: transparent;border: none;}
+
 /********************************************/
 /* FIN VARIABLES Y DEFINICIONES GLOBALES    */
 /********************************************/
@@ -144,101 +155,43 @@ Manuel agrego seteo en 88vh la seccion #Inicio dado que el TopBar ocupa 12vh y c
 /* Aca van los estilos del carousel */
 
 @keyframes tonext {
-  75% {
-    left: 0;
-  }
-  95% {
-    left: 100%;
-  }
-  98% {
-    left: 100%;
-  }
-  99% {
-    left: 0;
-  }
+  75% {left: 0;}
+  95% {left: 100%;}
+  98% {left: 100%;}
+  99% {left: 0;}
 }
 
 @keyframes tostart {
-  75% {
-    left: 0;
-  }
-  95% {
-    left: -300%;
-  }
-  98% {
-    left: -300%;
-  }
-  99% {
-    left: 0;
-  }
+  75% {left: 0;}
+  95% {left: -300%;}
+  98% {left: -300%;}
+  99% {left: 0;}
 }
 
 @keyframes snap {
-  96% {
-    scroll-snap-align: center;
-  }
-  97% {
-    scroll-snap-align: none;
-  }
-  99% {
-    scroll-snap-align: none;
-  }
-  100% {
-    scroll-snap-align: center;
-  }
+  96% {scroll-snap-align: center;}
+  97% {scroll-snap-align: none;}
+  99% {scroll-snap-align: none;}
+  100% {scroll-snap-align: center;}
 }
-
-/* body {
-  max-width: 37.5rem;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  font-family: 'Lato', sans-serif;
-} */
 
 /* 
-Manuel estas parecen ser declaraciones globales, si estas de acuerdo las siviría al principio
+Manuel estas parecen ser declaraciones globales, si estas de acuerdo propongo acotarlas al carousel
 
-DESDE ACA:
+ol, li {    -->    .carousel ol, .carousel li {
+
 */
 
-* {
-  box-sizing: border-box;
-  scrollbar-color: transparent transparent; /* thumb and track color */
-  scrollbar-width: 0px;
-}
-
-*::-webkit-scrollbar {
-  width: 0;
-}
-
-*::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-*::-webkit-scrollbar-thumb {
-  background: transparent;
-  border: none;
-}
-
-* {
-  -ms-overflow-style: none;
-}
-
-ol, li {
+.carousel ol, .carousel li {
   list-style: none;
   margin: 0,30rem,0;
   padding: 0,30rem,0;
 }
 
-/* 
-HASTA ACA:
-
-Manuel estas parecen ser declaraciones globales, si estas de acuerdo las siviría al principio
-*/
-
 .carousel {
   position: relative;
   margin: auto 1rem;
+  /* margin: var(--AltoTopBar) 1rem auto; Para que no lo tape la TopBar que mide 12vh y siempre en Top:0 */
   max-height: 75%;
   padding-top: 75%;
   filter: drop-shadow(0 0 10px #0003);
@@ -248,6 +201,7 @@ Manuel estas parecen ser declaraciones globales, si estas de acuerdo las sivirí
 .carousel__viewport {
   position: absolute;
   top: 0;
+/*  top: var(--AltoTopBar); /* Para que no lo tape la TopBar que mide 12vh y siempre en Top:0 */
   right: 0;
   bottom: 0;
   left: 0;
@@ -266,8 +220,6 @@ Manuel estas parecen ser declaraciones globales, si estas de acuerdo las sivirí
   counter-increment: item;
 }
 
-
-
 .carousel__slide:before {
   content: counter(item);
   position: absolute;
@@ -281,6 +233,7 @@ Manuel estas parecen ser declaraciones globales, si estas de acuerdo las sivirí
 .carousel__snapper {
   position: absolute;
   top: 0;
+/*  top: var(--AltoTopBar); /* Para que no lo tape la TopBar que mide 12vh y siempre en Top:0 */
   left: 0;
   width: 100%;
   height: 70%;
@@ -305,7 +258,6 @@ Manuel estas parecen ser declaraciones globales, si estas de acuerdo las sivirí
     animation-name: none;
   }
 }
-
 
 .carousel_img{
   width: 100%;
@@ -349,6 +301,7 @@ Manuel estas parecen ser declaraciones globales, si estas de acuerdo las sivirí
 .carousel__next {
   position: absolute;
   top: 0;
+/*  top: -var(--AltoTopBar); /* Para que no lo tape la TopBar que mide 12vh y siempre en Top:0 */
   margin-top: 37.5%;
   width: 4rem;
   height: 4rem;
@@ -390,7 +343,6 @@ Manuel estas parecen ser declaraciones globales, si estas de acuerdo las sivirí
 .carousel::after {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
 }
-
 /* Fin estilos  carousel */
 
 /* Estilos Formulario */
@@ -431,9 +383,24 @@ Manuel estas parecen ser declaraciones globales, si estas de acuerdo las sivirí
 }
 /* Fin estilos forumlario */
 
-/********************************************/
-/* SETEOS para el COMPORTAMIENTO RESPONSIVE */
-/********************************************/
+/*********************************************************/
+/* SETEOS para el COMPORTAMIENTO RESPONSIVE              */
+/*                                                       */
+/*  RESOLUCIONES a CONSIDERAR en la PRUEBA RESPONSIVE    */
+/*                                                       */
+/* #   CLASE         RESOLUCION  RATIO                   */
+/*     ------------  ----------  -----                   */
+/* 1.- DESKTOP:      1920 X 1080  16:9                   */
+/* 2.- DESKTOP:      1600 X  900  16:9                   */
+/* 3.- TABLET:       1366 X 1024    -   iPad Pro         */
+/* 4.- DESKTOP:      1280 X 1024   5:4  SVGA             */
+/* 5.- TABLET:       1024 X  768   4:3  iPad & iPad Mini */
+/* 6.- CELULAR:       414 X  896    -   iPhone XR        */
+/* 7.- CELULAR:       390 X  840    -   iPhone 12Pro     */
+/* 8.- CELULAR:       375 X  667    -   iPhone SE        */
+/* 9.- CELULAR:       360 X  740    -   Samsung S8+      */
+/*********************************************************/
+
 @media (max-width:1000px){
   .header__menu{flex-flow:column wrap; align-items:end; font-size: 85%;}
   .header__menu nav{order:3;}
