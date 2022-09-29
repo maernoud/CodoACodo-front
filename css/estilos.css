@@ -230,7 +230,12 @@ header img{
     margin: auto auto auto 10px;
   }
 }
-
+p::first-letter {
+  font-size: 130%;
+}
+.parrafoAcercaDe{
+  text-align: justify;
+}
 /**************************/
 /* FIN: SECCION ACERCA DE */
 /**************************/
@@ -261,15 +266,23 @@ header img{
   width: 90%;
   height: 30px;
   margin: 0.5rem;
-  background-color: #e2d8b9
+  background-color: #e2d8b9;
+  border-radius: 20px;
 }
 
 .formulario textarea {
   width: 90%;
   margin: 0.5rem;
-  background-color: #e2d8b9
+  background-color: #e2d8b9;
+  border-radius: 20px;
 }
-
+input::placeholder {
+  padding-left: 10px;
+}
+textarea::placeholder{
+  padding-top:4px;
+  padding-left: 10px;
+}
 .btn {
   color: var(--Ocre);
   border: 2px solid var(--Verde);
