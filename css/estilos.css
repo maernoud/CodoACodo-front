@@ -261,6 +261,9 @@ p::first-letter {
   justify-content: center;
   align-items: center;
 }
+label{
+  display:none;
+}
 
 .formulario input {
   width: 90%;
@@ -268,6 +271,7 @@ p::first-letter {
   margin: 0.5rem;
   background-color: #e2d8b9;
   border-radius: 20px;
+  text-indent: 10px;
 }
 
 .formulario textarea {
@@ -275,13 +279,17 @@ p::first-letter {
   margin: 0.5rem;
   background-color: #e2d8b9;
   border-radius: 20px;
+  text-indent: 20px;
+  
 }
 input::placeholder {
+  font-size: 20px;
   padding-left: 10px;
 }
 textarea::placeholder{
+  font-size: 20px;
   padding-top:4px;
-  padding-left: 10px;
+  
 }
 .btn {
   color: var(--Ocre);
