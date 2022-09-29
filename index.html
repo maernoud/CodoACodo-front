@@ -69,31 +69,25 @@
 
   <main>
     <section id="Inicio">
-      
-      
-        <article class="carousel" id="carousel">
-          
-
-        </article>
+        <article class="carousel" id="carousel"></article>
         <script>
-          car.setTagId("#carousel");
-          car.setBtnPrevProx("30%", "transparent", "rgba(0,0,0,0.2)");
+          //        car.setBtnPrevProx("30%", "transparent", "rgba(0,0,0,0.2)");
+          car.setBtnPrevProx("10%", "transparent", "rgba(0,0,0,0.1)");
+          car.setEfectoParallax();
           car.agregarImagen("img1.jpg");
           car.agregarImagen("img2.jpg");
           car.agregarImagen("img3.jpg");
           car.agregarImagen("img4.jpg");
+          car.setTagId("#carousel");
           car.mostrar();
           car.arrancar();
-        </script>
-      
+        </script>  
     </section>
 
     <section id="AcercaDe">
       <div id="AcercaDe__Video">
-
         <iframe src="https://player.vimeo.com/video/66468165" frameborder="0" allow="autoplay; fullscreen"
           allowfullscreen></iframe>
-
       </div>
       <div id="AcercaDe__Texto">
         <p>

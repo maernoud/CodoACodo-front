@@ -6,6 +6,7 @@ class carousel {
     this.imagenes = [];
     this.imagenActual = 0;
     this.imgOscurecidas = "#FFFFFF";
+    this.efectoParallax = false;
     this.imgPath = "./img/";
     this.intervalo = 2000;
     this.btnPrevProxAncho = "30%";
@@ -18,7 +19,8 @@ class carousel {
     this.tagId = tagId;
     this.inicializar();
   }
-  setImgOscurecidas(color){this.imgOscurecidas = color}
+  setImgOscurecidas(color){this.imgOscurecidas = color;}
+  setEfectoParallax(){this.efectoParallax = true;}
   setImgPath(path){this.imgPath = path;}
   setIntervalo(milisegs){this.intervalo = milisegs;}
   setBtnPrevProx(ancho, bkgColor, bkgColorHover){
@@ -48,6 +50,7 @@ class carousel {
     img.style.backgroundSize = "cover";
     img.style.backgroundPosition = "center";
     img.style.backgroundRepeat = "no-repeat";
+    img.style.backgroundAttachment = (this.efectoParallax) ? "fixed" : "scroll";
     if (this.imgOscurecidas != "#FFFFFF"){
       img.style.background = this.imgOscurecidas;
       img.style.backgroundBlendMode = "multiply";

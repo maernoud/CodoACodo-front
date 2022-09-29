@@ -1,18 +1,17 @@
 /********************************************/
 /* INICIO VARIABLES Y DEFINICIONES GLOBALES */
+/*                                          */
+/* Estilo: MobileFirst                      */
 /********************************************/
 
 :root{
   --AltoTopBar:max(12vh, 80px);
+  --AltoInicioYAcercaDe: calc(100vh - var(--AltoTopBar));
   --AltoFooter:max(8vh, 53px);
+  --AnchoInicioYAcercaDe:95vw;
   --Verde:#596A40;
   --Ocre:#DDAC1D;
   --Ciena:#E2DBCF;
-/* Manuel hay que chequear con la Diseñadora: 
-
-   1.- Si le parece bien iluminar la opción de menú en el Hover
-   2.- Creé el efecto de iluminación sumando 2 a cada hexa del RGB Ciena (#E2DBCF -> #E4DDD2)
-*/
   --CienaIluminado: #E4DDD2;
   --ColorMenuFont: var(--Ciena);
   --ColorMenuFontActivo: var(--CienaIluminado);
@@ -24,7 +23,17 @@
   box-sizing: border-box;
   transition: ease-in 0.1s all;
   font-family: 'Roboto';
+
+  /* Para ocultar las barras de Scroll */
+  scrollbar-color: transparent transparent; /* thumb and track color */
+  scrollbar-width: 0px;
+  -ms-overflow-style: none;
 }
+
+  /* Para ocultar las barras de Scroll */
+*::-webkit-scrollbar{width: 0;}
+*::-webkit-scrollbar-track{background: transparent;}
+*::-webkit-scrollbar-thumb{background: transparent; border: none;}
 
 /********************************************/
 /* FIN VARIABLES Y DEFINICIONES GLOBALES    */
@@ -34,11 +43,12 @@
 /* INICIO: GRANDES SECCIONES DEL BODY */
 /**************************************/
 body {
-  min-width: 320px;
+  min-width: 350px;
+  background-color: var(--Ciena);
+  color: var(--Verde);
 }
 
-header,
-footer {
+header, footer {
   background-color: var(--Verde);
   color: var(--Ciena);
 }
@@ -59,15 +69,9 @@ header {
 }
 
 main {
-
-
-
-  margin-top: var(--AltoTopBar); /* Para que no lo tape la TopBar que mide 12vh y siempre en Top:0 */
-
-  background-color: var(--Ciena);
-  color: var(--Verde);
+/* Para que la TopBar no lo tape el main */
+  margin-top: var(--AltoTopBar);
 }
-
 
 footer{
   height: var(--AltoFooter);
@@ -79,8 +83,9 @@ footer{
 /* FIN: GRANDES SECCIONES DEL BODY    */
 /**************************************/
 
-
-
+/**************************/
+/* INICIO: SECCION HEADER */
+/**************************/
 
 header img{
   content: url(../img/logoTexto.png); 
@@ -93,10 +98,8 @@ header img{
   height: calc(var(--AltoTopBar) - 6px);
   padding: 0px 10px;
 
-
   display: flex;
   flex-flow: row wrap;
-
   justify-content:end;
   align-items:center;
 
@@ -107,7 +110,6 @@ header img{
   order:1;
   font-size: 120%;
   margin-right: 14px;
-
 }
 
 .header__menu nav ul {
@@ -116,11 +118,9 @@ header img{
   justify-content: space-around;
 }
 
-
 .header__menu nav li{
   list-style-type: none; 
   padding: 10px 15px;
-
   color: var(--ColorMenuFont);
 }
 
@@ -135,10 +135,8 @@ header img{
   color: inherit;
 }
 
-
 .header__menu__redes{
   order:3;
-
 }
 
 .header__menu__redes i {
@@ -147,117 +145,109 @@ header img{
   padding: 5px;
 }
 
+/**************************/
+/* FIN: SECCION HEADER    */
+/**************************/
 
+/**************************/
+/* INICIO: SECCION INICIO */
+/**************************/
 
-* {
-  box-sizing: border-box;
-  scrollbar-color: transparent transparent;
-  
-  scrollbar-width: 0px;
-}
-
-*::-webkit-scrollbar {
-  width: 0;
-}
-
-*::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-*::-webkit-scrollbar-thumb {
-  background: transparent;
-  border: none;
-}
-
-* {
-  -ms-overflow-style: none;
-}
-
-ol,
-li {
-  list-style: none;
-  margin: 0, 30rem, 0;
-  padding: 0, 30rem, 0;
-}
-
-/* 
-HASTA ACA:
-
-Manuel estas parecen ser declaraciones globales, si estas de acuerdo las siviría al principio
-*/
+#Inicio{height: var(--AltoInicioYAcercaDe);}
 
 .carousel {
-  
   margin: auto;
-  padding: 2px;
-  width: 95vw;
-  height: 85vh;
+  /* padding: 2px; */
+  padding: 2px 0px;
+  padding: 0;
+  width: var(--AnchoInicioYAcercaDe);
+  width: 100%;
+  /* height: 85vh; */
+  height: var(--AltoInicioYAcercaDe);
   overflow: auto;
+  background-attachment: fixed;
 }
 
+/**************************/
+/* FIN: SECCION INICIO    */
+/**************************/
 
-/* Fin estilos  carousel */
+/*****************************/
+/* INICIO: SECCION ACERCA DE */
+/*****************************/
 
-
-
-
-
-
+#AcercaDe {
+  display: flex;
+  flex-direction: column;
+  width: var(--AnchoInicioYAcercaDe);
+  margin: 0 auto 10px auto;
+  padding: 0px;
+}
 
 #AcercaDe__Video {
-  
-  width: 100vw;
-  /* height: 100vh; */
-  /* text-align: center; */
-  /* color: white; */
-  padding: 10px 10px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  /*  4:3 Aspect Ratio (divide 3 by  4 = 0.75)   */
+  padding-top: 75%;
 }
 
+/* Luego el iframe con 100% height y width dentro del container div */
 #AcercaDe__Video iframe {
-  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   width: 100%;
+  height: 100%;
 }
 
 #AcercaDe__Texto {
-  
+  cursor: ns-resize;
   width: 90vw;
+  height: 50vh;
+  margin: auto;
   padding: 10px;
-  height: 80vh;
   border: var(--Verde) solid 5px;
-  margin: 0px 20px;
-  overflow: auto;
-  text-align: center;
   border-radius: 20px;
   -moz-border-radius:40px;
+  overflow: auto;
+  text-align: center;
 }
 
+#AcercaDe__Texto p {margin-bottom: 1rem;}
 
 @media (min-width:780px) {
-  #AcercaDe {
-    display: flex;
-    flex-direction: row;
-    height: 80vh;
-  }
-
-  #AcercaDe__Video {
-    width: 60%;
-
-  }
-
+  #AcercaDe {flex-direction: row;}
+  #AcercaDe__Video {width: 50%; padding-top: 37.5%;}
   #AcercaDe__Texto {
-    width: 40%;
+    width: 45%;
     height: 100%;
+    width: 50%;
+    height: 32vw;
+    margin: auto auto auto 10px;
   }
 }
 
+/**************************/
+/* FIN: SECCION ACERCA DE */
+/**************************/
 
+/*********************************/
+/* INICIO: SECCION PUBLICACIONES */
+/*********************************/
 
+/*********************************/
+/* FIN: SECCION PUBLICACIONES    */
+/*********************************/
 
-
-/* Estilos Formulario */
+/*****************************/
+/* INICIO: SECCION CONTACTO */
+/*****************************/
 
 .formulario {
-
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
@@ -292,12 +282,29 @@ Manuel estas parecen ser declaraciones globales, si estas de acuerdo las sivirí
   cursor: pointer;
   text-transform: uppercase;
 }
-/* Fin estilos forumlario */
 
+/*****************************/
+/* FIN: SECCION CONTACTO     */
+/*****************************/
 
-/********************************************/
-/* SETEOS para el COMPORTAMIENTO RESPONSIVE */
-/********************************************/
+/*********************************************************/
+/* SETEOS para el COMPORTAMIENTO RESPONSIVE              */
+/*                                                       */
+/*  RESOLUCIONES a CONSIDERAR en la PRUEBA RESPONSIVE    */
+/*                                                       */
+/* #   CLASE         RESOLUCION  RATIO                   */
+/*     ------------  ----------  -----                   */
+/* 1.- DESKTOP:      1920 X 1080  16:9                   */
+/* 2.- DESKTOP:      1600 X  900  16:9                   */
+/* 3.- TABLET:       1366 X 1024    -   iPad Pro         */
+/* 4.- DESKTOP:      1280 X 1024   5:4  SVGA             */
+/* 5.- TABLET:       1024 X  768   4:3  iPad & iPad Mini */
+/* 6.- TABLET:        768 X 1024   3:4  iPad & iPad Mini */
+/* 7.- CELULAR:       390 X  840    -   iPhone 12Pro     */
+/* 8.- CELULAR:       375 X  667    -   iPhone SE        */
+/* 9.- CELULAR:       360 X  740    -   Samsung S8+      */
+/*********************************************************/
+
 @media (max-width:1000px){
   .header__menu{flex-flow:column wrap; align-items:end; font-size: 85%;}
   .header__menu nav{order:3;}
@@ -312,10 +319,13 @@ Manuel estas parecen ser declaraciones globales, si estas de acuerdo las sivirí
   .header__menu nav li{padding: 10px 10px;}
 }
 
+@media (max-width:768px){
+}
+
 @media (max-width:510px){
   .header__menu{font-size: 65%; padding: 2px 0px;}
+  .header__menu nav li{padding: 10px 5px;}
   header img{padding: 2px 10px 2px 2px;}
-
 }
 
 @media (max-width:400px) {
