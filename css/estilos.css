@@ -35,6 +35,9 @@
 *::-webkit-scrollbar-track{background: transparent;}
 *::-webkit-scrollbar-thumb{background: transparent; border: none;}
 
+/* Para posicionar los hiperlinks del menú correctamente */
+.experimento{background-color:transparent; color: transparent; position: absolute; top:calc(var(--AltoTopBar) * -1);}
+
 /********************************************/
 /* FIN VARIABLES Y DEFINICIONES GLOBALES    */
 /********************************************/
@@ -71,6 +74,9 @@ header {
 main {
 /* Para que la TopBar no lo tape el main */
   margin-top: var(--AltoTopBar);
+}
+section{
+  position: relative;
 }
 
 footer{

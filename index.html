@@ -27,10 +27,10 @@
       <div class="header__menu">
         <nav>
           <ul>
-            <li><a href="#Inicio">INICIO</a></li>
-            <li><a href="#AcercaDe">ACERCA DE</a></li>
-            <li><a href="#Publicaciones">PUBLICACIONES</a></li>
-            <li><a href="#Contacto">CONTACTO</a></li>
+            <li><a href="#Go2Inicio">INICIO</a></li>
+            <li><a href="#Go2AcercaDe">ACERCA DE</a></li>
+            <li><a href="#Go2Publicaciones">PUBLICACIONES</a></li>
+            <li><a href="#Go2Contacto">CONTACTO</a></li>
           </ul>
         </nav>
         <div class="header__menu__buscar">
@@ -69,22 +69,24 @@
 
   <main>
     <section id="Inicio">
-        <article class="carousel" id="carousel"></article>
-        <script>
-          //        car.setBtnPrevProx("30%", "transparent", "rgba(0,0,0,0.2)");
-          car.setBtnPrevProx("10%", "transparent", "rgba(0,0,0,0.1)");
-          car.setEfectoParallax();
-          car.agregarImagen("img1.jpg");
-          car.agregarImagen("img2.jpg");
-          car.agregarImagen("img3.jpg");
-          car.agregarImagen("img4.jpg");
-          car.setTagId("#carousel");
-          car.mostrar();
-          car.arrancar();
-        </script>  
+      <span id="Go2Inicio" class="experimento"></span>
+      <article class="carousel" id="carousel"></article>
+      <script>
+        //        car.setBtnPrevProx("30%", "transparent", "rgba(0,0,0,0.2)");
+        car.setBtnPrevProx("10%", "transparent", "rgba(0,0,0,0.1)");
+        car.setEfectoParallax();
+        car.agregarImagen("img1.jpg");
+        car.agregarImagen("img2.jpg");
+        car.agregarImagen("img3.jpg");
+        car.agregarImagen("img4.jpg");
+        car.setTagId("#carousel");
+        car.mostrar();
+        car.arrancar();
+      </script>  
     </section>
 
     <section id="AcercaDe">
+      <span id="Go2AcercaDe" class="experimento"></span>
       <div id="AcercaDe__Video">
         <iframe src="https://player.vimeo.com/video/66468165" frameborder="0" allow="autoplay; fullscreen"
           allowfullscreen></iframe>
@@ -178,10 +180,12 @@
     </section>
 
     <section id="Publicaciones">
+      <span id="Go2Publicaciones" class="experimento"></span>
       <h5>Publicaciones</h5>
     </section>
 
     <section id="Contacto">
+      <span id="Go2Contacto" class="experimento"></span>
       <h5>Contacto</h5>
       <form class="formulario">
 
