@@ -232,7 +232,41 @@ header nav a{
 /*********************************/
 /* INICIO: SECCION PUBLICACIONES */
 /*********************************/
+.cards{
+  margin-left: 5rem;
 
+}
+
+.column {
+  float: left;
+  width: 33%;
+  padding: 0 10px;
+  
+}
+
+/* remueve el margen extra de izquierda y derecha por el padding en columnas*/
+.row {margin: 0 -5px;}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+  border-radius: 20px;
+  padding: 16px;
+  text-align: center;
+  background-color: var(--Ciena);
+  min-height: 520px;
+}
+.card-img-top{
+  position:relative;
+  left:-1rem;
+  border-radius: 20px;
+  min-height: 230px;
+}
 
 /*********************************/
 /* FIN: SECCION PUBLICACIONES    */
@@ -334,5 +368,16 @@ textarea::placeholder{
     width: 50%;
     height: 32vw;
     margin: auto auto auto 10px;
+  }
+}
+@media (max-width:768px){
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+    
+  }
+  .cards{
+    margin-left:2rem;
   }
 }
