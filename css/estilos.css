@@ -232,42 +232,7 @@ header nav a{
 /*********************************/
 /* INICIO: SECCION PUBLICACIONES */
 /*********************************/
-.cards{
-  margin-left: 5rem;
 
-
-}
-
-.column {
-  float: left;
-  width: 33%;
-  padding: 0 10px;
-  
-}
-
-/* remueve el margen extra de izquierda y derecha por el padding en columnas*/
-.row {margin: 0 -5px;}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
-  border-radius: 20px;
-  padding: 16px;
-  text-align: center;
-  background-color: var(--Ciena);
-  min-height: 520px;
-}
-.card-img-top{
-  position:relative;
-  left:-1rem;
-  border-radius: 20px;
-  min-height: 230px;
-}
 
 /*********************************/
 /* FIN: SECCION PUBLICACIONES    */
@@ -352,39 +317,6 @@ textarea::placeholder{
 /* Este @media es para pasar al header con logo ancho */
 @media (min-width:950px) {header img{content: url(../img/logoTexto.png);}}
 
-
-@media (max-width:768px){
-  .column {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-    
-  }
-  .cards{
-    margin-left:2rem;
-  }
-}
-
-@media (max-width:510px){
-  .header__menu{font-size: 65%; padding: 2px 0px;}
-  .header__menu nav li{padding: 10px 5px;}
-  header img{padding: 2px 10px 2px 2px;}
-}
-
-@media (max-width:400px) {
-  .header__menu {
-    font-size: 55%;
-    padding: 2px 0px;
-  }
-
-  header img {
-    padding: 2px 1px 2px 0px;
-  }
-
-  .header__menu nav li {
-    padding: 5px;
-  }
-
 /* Este @media es para ajustar al menu horizontal y pasar #AcercaDe a 2 columnas */
 @media (min-width:780px) {
   header nav{
@@ -395,7 +327,6 @@ textarea::placeholder{
     font-size: calc(var(--FontSize) * 1.1);
   }  
   header nav span {padding: 0 10px;}  
-
 
   #AcercaDe {flex-direction: row;}
   #AcercaDe__Video {width: 50%; padding-top: 37.5%;}
