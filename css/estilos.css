@@ -259,13 +259,24 @@ header nav a{
   padding: 16px;
   text-align: center;
   background-color: var(--Ciena);
-  min-height: 520px;
+  min-height: 550px;
+  
 }
 .card-img-top{
   position:relative;
-  left:-1rem;
+  left:-0.7rem;
   border-radius: 20px;
-  min-height: 230px;
+  max-height: 220px
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+button.btn {
+  margin-top: auto;
+
 }
 
 /*********************************/
