@@ -32,6 +32,7 @@ function submitForm(){
     var json = JSON.stringify(form);
 
     console.log(json)
+    document.getElementById("Form").reset();
     // document.getElementById("Form").submit();
 
 }
