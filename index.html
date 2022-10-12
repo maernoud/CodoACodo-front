@@ -19,6 +19,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="./js/carousel.js"></script>
+    <script src="./js/validation.js"></script>
   </head>
 
   <body>
@@ -223,28 +224,28 @@
       <section id="Contacto">
         <span id="Go2Contacto" class="section__link"></span>
         <h5>Contacto</h5>
-        <form class="formulario">
+        <form class="formulario" name="Form" id="Form" >
           <label class="formLabel">Nombre: </label>
-          <input type="text" name="Name" placeholder="Nombre" id="Name" />
+          <input type="text" name="Name" placeholder="Nombre" id="nombre" />
 
           <label class="formLabel">Email: </label>
           <input
             type="email"
-            name="email"
+            name="Email"
             placeholder="email@email.com"
-            id="Email"
+            id="email"
           />
 
           <label class="formLabel">Mensaje: </label>
           <textarea
-            name="textarea"
+            name="Textarea"
             rows="10"
             cols="70"
             placeholder="Escriba su mensaje"
-            id="Textarea"
+            id="textarea"
           ></textarea>
 
-          <button class="btn" type="submit">Enviar</button>
+          <button class="btn" type="button" onclick="return validation()">Enviar</button>
         </form>
       </section>
     </main>
