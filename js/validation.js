@@ -8,7 +8,6 @@ function validateName(){
     return true;
 }
 
-
 function validateEmail() {
     var emailID = document.Form.Email.value;
     atpos = emailID.indexOf("@");
@@ -22,8 +21,7 @@ function validateEmail() {
     return( true );
  }
 
-function submitForm(){
-    
+function submitForm(){    
     let name = document.getElementById("nombre").value;
     let email = document.getElementById("email").value;
     let text = document.getElementById("textarea").value;
@@ -36,6 +34,7 @@ function submitForm(){
     // document.getElementById("Form").submit();
 
 }
+
 function validation(){
     if( document.Form.Name.value == "" ) {
         alert( "Por favor introduce tu nombre" );
@@ -56,10 +55,7 @@ function validation(){
              }else{
                 submitForm()
              }
-        
-        }
-    
-    
+        }    
     }
 
      

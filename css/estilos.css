@@ -12,7 +12,8 @@
   --Verde:#596A40;
   --VerdeOscurecido:#566737;
   --Ocre:#DDAC1D;
-  --Ciena:#E2DBCF;
+  --Ciena:#E2DBCF; /* Original definido x el Diseñador */
+  --Ciena:#DCD1BD; /* Nuevo Ciena utilizado x PNG de las Sierras */
   --CienaIluminado: #E4DDD2;
   --ColorMenuFont: var(--Ciena);
   --ColorMenuFontActivo: var(--CienaIluminado);
@@ -163,11 +164,19 @@ header nav a{
   margin: auto;
   padding: 2px 0px;
   padding: 0;
-  width: var(--AnchoInicioYAcercaDe);
   width: 100%;
   height: var(--AltoBody);
   overflow: auto;
   background-attachment: fixed;
+}
+
+#sierras{
+  background-image: url("../img/Graficos_WEB_ONGLM.png");
+  position: absolute;
+  bottom: 0;
+  left: -1px;
+  width: 100%;
+  height: 209px;
 }
 
 /**************************/
@@ -232,9 +241,13 @@ header nav a{
 /*********************************/
 /* INICIO: SECCION PUBLICACIONES */
 /*********************************/
+#Publicaciones{
+  margin: 0 auto 30px auto;
+  padding: 0px;
+}
+
 .cards{
   margin-left: 5rem;
-
 }
 
 .column {
