@@ -175,8 +175,9 @@ header nav a{
   position: absolute;
   bottom: 0;
   left: -1px;
-  width: 100%;
+  width: calc(100% + 1px);
   height: 209px;
+  max-height: 37vh;
 }
 
 /**************************/
@@ -246,9 +247,7 @@ header nav a{
   padding: 0px;
 }
 
-.cards{
-  margin-left: 5rem;
-}
+.cards{margin-left: 5rem;}
 
 .column {
   float: left;
@@ -299,6 +298,8 @@ button.btn {
 /*****************************/
 /* INICIO: SECCION CONTACTO */
 /*****************************/
+
+#Contacto h2{text-align: center;}
 
 .formulario {
   width: 100%;
@@ -375,8 +376,8 @@ textarea::placeholder{
 /* Este @media es para pasar al header con logo ancho */
 @media (min-width:950px) {header img{content: url(../img/logoTexto.png);}}
 
-/* Este @media es para ajustar al menu horizontal y pasar #AcercaDe a 2 columnas */
 @media (min-width:780px) {
+  /* Este @media es para ajustar al menu horizontal */
   header nav{
     flex-flow: row wrap;
     justify-content:space-evenly;
@@ -386,6 +387,7 @@ textarea::placeholder{
   }  
   header nav span {padding: 0 10px;}  
 
+  /* Este @media es para pasar #AcercaDe a 2 columnas */
   #AcercaDe {flex-direction: row;}
   #AcercaDe__Video {width: 50%; padding-top: 37.5%;}
   #AcercaDe__Texto {
@@ -394,14 +396,13 @@ textarea::placeholder{
     margin: auto auto auto 10px;
   }
 }
+
 @media (max-width:768px){
   .column {
     width: 100%;
     display: block;
-    margin-bottom: 20px;
-    
+    margin-bottom: 20px;  
   }
-  .cards{
-    margin-left:2rem;
-  }
+
+  .cards{margin-left:2rem;}
 }

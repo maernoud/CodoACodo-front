@@ -19,7 +19,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="./js/carousel.js"></script>
-    <script src="./js/publicaciones.js"></script>
+    <script src="./datos/publicaciones.js"></script>
     <script src="./js/validation.js"></script>
   </head>
 
@@ -179,71 +179,26 @@
 
       <section id="Publicaciones">
         <span id="Go2Publicaciones" class="section__link"></span>
-        <!-- <h5>Publicaciones</h5> -->
         <div class="cards">
-          <div class="row">
-
-              <div class="column">
-                <div class="card" style="width: 18rem;">
-                  <img class="card-img-top" src="./img/card1.jpg" alt="Card image cap"style="width: 18rem;">
-                  <div class="card-body">
-                    <h5 class="card-title">UNA VEZ MÁS:</h5>
-                    <p class="card-text">SOBRE EL PRESUPUESTO Y LA TASA DE LA RESERVA LOS MANANTIALES PARA EL 2022</p>
-                    <a href="https://onglosmanantiales.wordpress.com/2021/12/30/una-vez-mas-sobre-el-presupuesto-y-la-tasa-de-la-reserva-los-manantiales-para-el-2022/" 
-                      class="btn btn-primary" target="_blank">Leer más</a>
-                  </div>
-                </div>
-              </div>
-  
-              <div class="column">
-                <div class="card" style="width: 18rem;">
-                  <img class="card-img-top" src="./img/card2.jpg" alt="Card image cap" style="width: 18rem;">
-                  <div class="card-body">
-                    <h5 class="card-title">Comunicado de la Asociación Civil Los Manantiales</h5>
-                    <p class="card-text">Proyecto de modificación de la Ordenanza de Usos de Suelo de Río Ceballos N° 2651/19.</p>
-                    <a href="https://onglosmanantiales.wordpress.com/2021/10/28/comunicado-de-la-asociacion-civil-los-manantiales-por-el-proyecto-de-modificacion-de-la-ordenanza-de-usos-de-suelo-de-rio-ceballos-n-2651-19/" 
-                      class="btn btn-primary" target="_blank">Leer más</a>
-                  </div>
-                </div>
-              </div>
-  
-              <div class="column">
-                <div class="card" style="width: 18rem;">
-                  <img class="card-img-top" src="./img/card3.jpg" alt="Card image cap" style="width: 18rem;">
-                  <div class="card-body">
-                    <h5 class="card-title">Comunicado de la Asociación Civil Los Manantiales</h5>
-                    <p class="card-text">Sobre la reunión en comisión del Consejo de Gestión de la Reserva con el Concejo Deliberante el Lunes 5 de Abril. Tema: La disminución de la tasa y presupuesto de la Reserva Hídrica Natural Municipal Los Manantiales</p>
-                    <a href="https://onglosmanantiales.wordpress.com/2021/10/28/comunicado-de-la-asociacion-civil-los-manantiales-por-el-proyecto-de-modificacion-de-la-ordenanza-de-usos-de-suelo-de-rio-ceballos-n-2651-19/" 
-                      class="btn btn-primary" target="_blank">Leer más</a>
-                  </div>
-                </div>
-              </div>
-          </div>
+          <div  id="Publicaciones__cards" class="row"></div>
+          <script src="./js/mostrar_pub.js"></script>
+        </div>
       </section>
 
       <section id="Contacto">
         <span id="Go2Contacto" class="section__link"></span>
-        <!-- <h5>Contacto</h5> -->
+        <h2>Contacto</h2>
         <form class="formulario" name="Form" id="Form" >
           <label class="formLabel">Nombre: </label>
           <input type="text" name="Name" placeholder="Nombre" id="nombre" />
 
           <label class="formLabel">Email: </label>
-          <input
-            type="email"
-            name="Email"
-            placeholder="email@email.com"
-            id="email"
-          />
+          <input type="email" name="Email" placeholder="email@email.com" id="email"/>
 
           <label class="formLabel">Mensaje: </label>
-          <textarea
-            name="Textarea"
-            rows="10"
-            cols="70"
-            placeholder="Escriba su mensaje"
-            id="textarea"
-          ></textarea>
+          <textarea name="Textarea" rows="10" cols="70" placeholder="Escriba su mensaje" id="textarea">
+            
+          </textarea>
 
           <button class="btn" type="button" onclick="return validation()">Enviar</button>
         </form>
