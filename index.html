@@ -19,13 +19,15 @@
       crossorigin="anonymous"
     ></script>
     <script src="./js/carousel.js"></script>
+    <script src="./js/publicaciones.js"></script>
     <script src="./js/validation.js"></script>
   </head>
 
   <body>
     <header>
-      <a href="https://onglosmanantiales.wordpress.com/" target="_blank">
-        <img src="./img/logo.png" alt="Logo de ACLM" />
+      <!-- <a href="https://onglosmanantiales.wordpress.com/" target="_blank"> -->
+      <a href="#">
+          <img src="./img/logo.png" alt="Logo de ACLM" />
       </a>
       <nav>
         <span><a href="#Go2Inicio">INICIO</a></span>
@@ -59,6 +61,7 @@
       <section id="Inicio">
         <span id="Go2Inicio" class="section__link"></span>
         <article class="carousel" id="carousel"></article>
+        <div id="sierras"></div>
         <script>
           //      car.setBtnPrevProx("30%", "transparent", "rgba(0,0,0,0.2)");
           car.setBtnPrevProx("20%", "transparent", "rgba(0,0,0,0.1)");
@@ -176,10 +179,10 @@
 
       <section id="Publicaciones">
         <span id="Go2Publicaciones" class="section__link"></span>
-        <h5>Publicaciones</h5>
+        <!-- <h5>Publicaciones</h5> -->
         <div class="cards">
           <div class="row">
-            
+
               <div class="column">
                 <div class="card" style="width: 18rem;">
                   <img class="card-img-top" src="./img/card1.jpg" alt="Card image cap"style="width: 18rem;">
@@ -215,15 +218,12 @@
                   </div>
                 </div>
               </div>
-            
           </div>
-  
-
       </section>
 
       <section id="Contacto">
         <span id="Go2Contacto" class="section__link"></span>
-        <h5>Contacto</h5>
+        <!-- <h5>Contacto</h5> -->
         <form class="formulario" name="Form" id="Form" >
           <label class="formLabel">Nombre: </label>
           <input type="text" name="Name" placeholder="Nombre" id="nombre" />
