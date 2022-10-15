@@ -1,5 +1,5 @@
 const publicaciones = [{
-                    "img": "../img/card1.jpg",
+                    "img": "./img/card1.jpg",
                     "titulo": "UNA VEZ MÁS:",
                     "texto": "SOBRE EL PRESUPUESTO Y LA TASA DE LA RESERVA LOS MANANTIALES PARA EL 2022",
                     "url": "https://onglosmanantiales.wordpress.com/2021/12/30/una-vez-mas-sobre-el-presupuesto-y-la-tasa-de-la-reserva-los-manantiales-para-el-2022/"
