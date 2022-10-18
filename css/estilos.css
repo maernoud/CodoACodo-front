@@ -413,12 +413,35 @@ textarea::placeholder{
   }
 }
 
-@media (max-width:768px){
+@media (max-width:1024px){
   .column {
-    width: 100%;
+    width: 50%;
     display: block;
     margin-bottom: 20px;  
   }
 
   .cards{margin-left:2rem;}
+
+  .card {
+   
+    min-width: 90%;
+   
+  }
+
+}
+@media (max-width:768px){
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;  
+    }
+  
+    .cards{margin-left:2rem;}
+  
+    .card {
+     
+      min-width: 90%;
+      max-width: 90%
+    }
+  
 }
