@@ -176,7 +176,7 @@ header nav a{
   bottom: 0;
   left: -1px;
   width: calc(100% + 1px);
-  height: 209px;
+  height: 180px;
   max-height: 37vh;
 }
 
@@ -270,7 +270,7 @@ header nav a{
   border-radius: 20px;
   padding: 16px;
   text-align: center;
-  background-color: var(--Ciena);
+  background-color: #e2d8b9;
   min-height: 550px;
   
 }
@@ -341,6 +341,7 @@ textarea::placeholder{
 }
 .btn {
   color: var(--Ocre);
+  background-color: #e2d8b9;
   border: 2px solid var(--Verde);
   border-radius: 6px;
   padding: 16px 32px;
@@ -353,6 +354,21 @@ textarea::placeholder{
 
 /*****************************/
 /* FIN: SECCION CONTACTO     */
+/*****************************/
+/*****************************/
+/* INICIO: FOOTER     */
+/*****************************/
+.pieDePagina{
+  display: flex;
+  justify-content: center;
+  padding-top: 12px;
+}
+.footerP{
+  text-align: center;
+}
+
+/*****************************/
+/* FIN: FOOTER     */
 /*****************************/
 
 /*********************************************************/
