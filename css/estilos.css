@@ -3,7 +3,9 @@
 /*                                          */
 /* Estilo: MobileFirst                      */
 /********************************************/
-
+html {
+  scroll-behavior: smooth;
+}
 :root{
   --AltoTopBar:max(12vh, 80px);
   --AltoBody: calc(100vh - var(--AltoTopBar));
@@ -247,13 +249,16 @@ header nav a{
   padding: 0px;
 }
 
-.cards{margin-left: 5rem;}
+.cards{
+  margin-left: 5rem;
+
+}
 
 .column {
   float: left;
   width: 33%;
   padding: 0 10px;
-  
+  margin-bottom: 2rem;
 }
 
 /* remueve el margen extra de izquierda y derecha por el padding en columnas*/
@@ -263,6 +268,7 @@ header nav a{
   content: "";
   display: table;
   clear: both;
+  
 }
 
 .card {
@@ -289,6 +295,12 @@ header nav a{
 button.btn {
   margin-top: auto;
 
+}
+
+.card:hover {
+  transform: scale(1.15);
+  background-color: #e1d3aa;
+  font-weight: bold;
 }
 
 /*********************************/
