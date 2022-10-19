@@ -19,4 +19,8 @@ const getCards = (arrPubs) => {
 }
 
 const p = document.getElementById("Publicaciones__cards");
-p.innerHTML = getCards(publicaciones);
+
+fetch("./datos/publicaciones.json")
+.then(arch => arch.json())
+.then(json => p.innerHTML = getCards(json))
+.catch(e => console.log("Error: NO pude leer el archivo de Publicaciones. [ERR:", e, "]"));
