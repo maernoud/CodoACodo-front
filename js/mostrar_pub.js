@@ -19,4 +19,18 @@ const getCards = (arrPubs) => {
 }
 
 const p = document.getElementById("Publicaciones__cards");
-p.innerHTML = getCards(publicaciones);
+
+let req = new XMLHttpRequest();
+req.onreadystatechange = () => {
+  if (req.readyState == XMLHttpRequest.DONE) {
+    p.innerHTML = getCards(JSON.parse(req.responseText).record);
+  }
+};
+req.open("GET", "https://api.jsonbin.io/v3/b/634f0f492b3499323be30a4a", true);
+req.setRequestHeader("X-Master-Key", "$2b$10$SykxUMjwq1qw3S.9ghPOMOHNNlarr/sFIHzEM9f7T/miq0zlXSj3u");
+req.send();
+
+//fetch("./datos/publicaciones.json")
+//.then(arch => arch.json())
+//.then(json => p.innerHTML = getCards(json))
+//.catch(e => console.log("Error: NO pude leer el archivo de Publicaciones. [ERR:", e, "]"));
