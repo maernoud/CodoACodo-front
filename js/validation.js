@@ -30,9 +30,10 @@ function submitForm(){
     var json = JSON.stringify(form);
 
     console.log(json)
+    
+    let form_submit = document.getElementById("Form");
+    form_submit.submit();
     document.getElementById("Form").reset();
-    // document.getElementById("Form").submit();
-
 }
 
 function validation(){
