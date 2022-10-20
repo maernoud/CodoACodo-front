@@ -249,10 +249,7 @@ header nav a{
   padding: 0px;
 }
 
-.cards{
-  margin-left: 5rem;
-
-}
+.cards{margin-left: 5rem;}
 
 .column {
   float: left;
@@ -268,7 +265,6 @@ header nav a{
   content: "";
   display: table;
   clear: both;
-  
 }
 
 .card {
@@ -277,9 +273,9 @@ header nav a{
   padding: 16px;
   text-align: center;
   background-color: #e2d8b9;
-  min-height: 550px;
-  
+  min-height: 550px;  
 }
+
 .card-img-top{
   position:relative;
   left:-0.7rem;
@@ -292,10 +288,7 @@ header nav a{
   flex-direction: column;
 }
 
-button.btn {
-  margin-top: auto;
-
-}
+button.btn {margin-top: auto;}
 
 .card:hover {
   transform: scale(1.15);
@@ -342,15 +335,16 @@ label{
   background-color: #e2d8b9;
   border-radius: 20px;
   text-indent: 20px;
-  
 }
+
 input::placeholder {
   padding-left: 10px;
 }
+
 textarea::placeholder{
   padding-top:4px;
-  
 }
+
 .btn {
   color: var(--Ocre);
   background-color: #e2d8b9;
@@ -401,8 +395,19 @@ textarea::placeholder{
 /* 9.- CELULAR:       360 X  740    -   Samsung S8+      */
 /*********************************************************/
 
+/* Este @media es para pasar #Publicaciones a 2 columnas */
+@media (max-width:1200px) {
+  #Publicaciones .column {
+    width: 50%;
+    display: block;
+    margin-bottom: 20px;  
+  }
+  #Publicaciones .cards {margin-left:2rem;}
+  #Publicaciones .card {min-width: 90%;}
+}
+
 /* Este @media es para pasar al header con logo ancho */
-@media (min-width:950px) {header img{content: url(../img/logoTexto.png);}}
+@media (min-width:1000px) {header img{content: url(../img/logoTexto.png);}}
 
 @media (min-width:780px) {
   /* Este @media es para ajustar al menu horizontal */
@@ -423,37 +428,9 @@ textarea::placeholder{
     height: 32vw;
     margin: auto auto auto 10px;
   }
-}
 
-@media (max-width:1024px){
-  .column {
-    width: 50%;
-    display: block;
-    margin-bottom: 20px;  
-  }
-
-  .cards{margin-left:2rem;}
-
-  .card {
-   
-    min-width: 90%;
-   
-  }
-
-}
-@media (max-width:768px){
-    .column {
-      width: 100%;
-      display: block;
-      margin-bottom: 20px;  
-    }
-  
-    .cards{margin-left:2rem;}
-  
-    .card {
-     
-      min-width: 90%;
-      max-width: 90%
-    }
-  
+  /* Este @media es para pasar #Publicaciones a 1 columna */
+  #Publicaciones .column {width: 100%;}
+  #Publicaciones .cards{margin-left:2rem;}
+  #Publicaciones .card {max-width: 90%}
 }
