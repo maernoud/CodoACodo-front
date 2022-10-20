@@ -249,25 +249,26 @@ header nav a{
   padding: 0px;
 }
 
-.cards{margin-left: 5rem;}
+#Publicaciones .cards{margin-left: 2rem;}
 
-.column {
+#Publicaciones .column {
+  display: block;
   float: left;
-  width: 33%;
+  width: 100%;
   padding: 0 10px;
-  margin-bottom: 2rem;
+  margin-bottom: 20px;
 }
 
 /* remueve el margen extra de izquierda y derecha por el padding en columnas*/
-.row {margin: 0 -5px;}
+#Publicaciones .row {margin: 0 -5px;}
 
-.row:after {
+#Publicaciones .row:after {
   content: "";
   display: table;
   clear: both;
 }
 
-.card {
+#Publicaciones .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
   border-radius: 20px;
   padding: 16px;
@@ -276,21 +277,21 @@ header nav a{
   min-height: 550px;  
 }
 
-.card-img-top{
+#Publicaciones .card-img-top{
   position:relative;
   left:-0.7rem;
   border-radius: 20px;
   max-height: 220px
 }
 
-.card-body {
+#Publicaciones .card-body {
   display: flex;
   flex-direction: column;
 }
 
-button.btn {margin-top: auto;}
+#Publicaciones button.btn {margin-top: auto;}
 
-.card:hover {
+#Publicaciones .card:hover {
   transform: scale(1.15);
   background-color: #e1d3aa;
   font-weight: bold;
@@ -362,19 +363,17 @@ textarea::placeholder{
 /* FIN: SECCION CONTACTO     */
 /*****************************/
 /*****************************/
-/* INICIO: FOOTER     */
+/* INICIO: FOOTER            */
 /*****************************/
 .pieDePagina{
   display: flex;
   justify-content: center;
   padding-top: 12px;
 }
-.footerP{
-  text-align: center;
-}
+.footerP{text-align: center;}
 
 /*****************************/
-/* FIN: FOOTER     */
+/* FIN: FOOTER               */
 /*****************************/
 
 /*********************************************************/
@@ -395,20 +394,6 @@ textarea::placeholder{
 /* 9.- CELULAR:       360 X  740    -   Samsung S8+      */
 /*********************************************************/
 
-/* Este @media es para pasar #Publicaciones a 2 columnas */
-@media (max-width:1200px) {
-  #Publicaciones .column {
-    width: 50%;
-    display: block;
-    margin-bottom: 20px;  
-  }
-  #Publicaciones .cards {margin-left:2rem;}
-  #Publicaciones .card {min-width: 90%;}
-}
-
-/* Este @media es para pasar al header con logo ancho */
-@media (min-width:1000px) {header img{content: url(../img/logoTexto.png);}}
-
 @media (min-width:780px) {
   /* Este @media es para ajustar al menu horizontal */
   header nav{
@@ -428,9 +413,38 @@ textarea::placeholder{
     height: 32vw;
     margin: auto auto auto 10px;
   }
+  
+  /* Este @media es para pasar #Publicaciones de 1 -> 2 columnas */
+  #Publicaciones .column {width: 50%;}
+  #Publicaciones .card {min-width: 90%;}
+}
 
-  /* Este @media es para pasar #Publicaciones a 1 columna */
+/* Este @media es para pasar al header con logo ancho */
+@media (min-width:1000px) {header img{content: url(../img/logoTexto.png);}}
+
+/* Este @media es para pasar #Publicaciones de 2 -> 3 columnas */
+@media (min-width:1200px) {
+  #Publicaciones .cards {margin-left:5rem;}
+  #Publicaciones .column {
+    width: 33%;
+    margin-bottom: 2rem;  
+  }
+}
+
+/* Cambio @Media de Publicaciones para adaptar a Mobile First
+@media (max-width:1200px) {
+  #Publicaciones .column {
+    width: 50%;
+    display: block;
+    margin-bottom: 20px;  
+  }
+  #Publicaciones .cards {margin-left:2rem;}
+  #Publicaciones .card {min-width: 90%;}
+}
+
+@media (max-width:779px) {
   #Publicaciones .column {width: 100%;}
   #Publicaciones .cards{margin-left:2rem;}
   #Publicaciones .card {max-width: 90%}
 }
+*/
