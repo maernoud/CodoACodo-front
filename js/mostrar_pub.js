@@ -1,7 +1,7 @@
 const getCard = (pub) => {
   let sHTML=`<div class="column">
-            <div class="card">
-              <img class="card-img-top" src=${pub.img} alt="Card image cap">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src=${pub.img} alt="Card image cap" style="width: 18rem;">
               <div class="card-body">
                 <h5 class="card-title">${pub.titulo}</h5>
                 <p class="card-text">${pub.texto}</p>
@@ -9,8 +9,6 @@ const getCard = (pub) => {
               </div>
             </div>
           </div>`;
-  //<div class="card" style="width: 18rem;">
-  //  <img class="card-img-top" src=${pub.img} alt="Card image cap" style="width: 18rem;">
   return sHTML;
 }
 

@@ -64,24 +64,24 @@
         <article class="carousel" id="carousel"></article>
         <div id="sierras"></div>
         <script>
+          //      car.setBtnPrevProx("30%", "transparent", "rgba(0,0,0,0.2)");
+          let viewportWidth = window.innerWidth;
           car.setBtnPrevProx("20%", "transparent", "rgba(0,0,0,0.1)");
           car.setEfectoParallax();
          
-          let viewportWidth = window.innerWidth;
-          console.log("el ancho de pantalla es:" + viewportWidth)
+           console .log("el ancho de pantalla es:" + viewportWidth)
           if(viewportWidth<768){ 
-            alert(viewportWidth, " cargo IMG SMALL");
-            car.agregarImagen("img1_small.jpg");
-            car.agregarImagen("img2_small.jpg");
-            car.agregarImagen("img3_small.jpg");
-            car.agregarImagen("img4_small.jpg");
-          }else{
-            alert(viewportWidth, " cargo IMG BIG");
-            car.agregarImagen("img1.jpg");
-            car.agregarImagen("img2.jpg");
-            car.agregarImagen("img3.jpg");
-            car.agregarImagen("img4.jpg");
-          }
+          car.agregarImagen("img1_small.jpg");
+          car.agregarImagen("img2_small.jpg");
+          car.agregarImagen("img3_small.jpg");
+          car.agregarImagen("img4_small.jpg");
+        }else{
+          car.agregarImagen("img1.jpg");
+          car.agregarImagen("img2.jpg");
+          car.agregarImagen("img3.jpg");
+          car.agregarImagen("img4.jpg");}
+          
+          
           car.setTagId("#carousel");
           car.mostrar();
           car.arrancar();
