@@ -10,23 +10,16 @@
     <!-- Letra acerca de -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Roboto:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/df986e655c.js"
-      crossorigin="anonymous"
-    ></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet"/>
+    <script src="https://kit.fontawesome.com/df986e655c.js" crossorigin="anonymous"></script>
     <script src="./js/carousel.js"></script>
-<!--     <script src="./datos/publicaciones.js"></script> -->
     <script src="./js/validation.js"></script>
-    <script src="./js/nodemailer.js"></script>
+    <!-- <script src="./js/nodemailer.js"></script> -->
   </head>
 
   <body>
     <header>
-      <!-- <a href="https://onglosmanantiales.wordpress.com/" target="_blank"> -->
+      <!-- <a href="https://maernoud.github.io/CodoACodo-front/" target="_blank"> -->
       <a href="#">
           <img src="./img/logo.png" alt="Logo de ACLM" />
       </a>
@@ -40,19 +33,13 @@
       <div class="header__menu__buscar"></div>
 -->
       <div class="header__menu__redes">
-        <a
-          href="https://www.facebook.com/Asociacion.Civil.Los.Manantiales"
-          target="_blank"
-        >
+        <a href="https://www.facebook.com/Asociacion.Civil.Los.Manantiales" target="_blank">
           <i class="fab fa-facebook fa-sm redes"></i>
         </a>
         <a href="https://www.instagram.com/onglosmanantiales/" target="_blank">
           <i class="fab fa-instagram fa-sm redes"></i>
         </a>
-        <a
-          href="https://www.facebook.com/Asociacion.Civil.Los.Manantiales"
-          target="_blank"
-        >
+        <a href="https://www.facebook.com/Asociacion.Civil.Los.Manantiales" target="_blank">
           <i class="fab fa-youtube-square fa-sm redes"></i>
         </a>
       </div>
@@ -64,24 +51,24 @@
         <article class="carousel" id="carousel"></article>
         <div id="sierras"></div>
         <script>
-          //      car.setBtnPrevProx("30%", "transparent", "rgba(0,0,0,0.2)");
-          let viewportWidth = window.innerWidth;
           car.setBtnPrevProx("20%", "transparent", "rgba(0,0,0,0.1)");
           car.setEfectoParallax();
-         
-           console .log("el ancho de pantalla es:" + viewportWidth)
-          if(viewportWidth<768){ 
-          car.agregarImagen("img1_small.jpg");
-          car.agregarImagen("img2_small.jpg");
-          car.agregarImagen("img3_small.jpg");
-          car.agregarImagen("img4_small.jpg");
-        }else{
-          car.agregarImagen("img1.jpg");
-          car.agregarImagen("img2.jpg");
-          car.agregarImagen("img3.jpg");
-          car.agregarImagen("img4.jpg");}
-          
-          
+
+          // Si es pantalla chica (celular) cargo imagenes pequeñas
+          let viewportWidth = window.innerWidth;
+          if(viewportWidth < 768){ 
+            console.log("IMG pequeñas (" + viewportWidth + ")");
+            car.agregarImagen("img1_small.jpg");
+            car.agregarImagen("img2_small.jpg");
+            car.agregarImagen("img3_small.jpg");
+            car.agregarImagen("img4_small.jpg");
+          }else{
+            console.log("IMG normales (" + viewportWidth + ")");
+            car.agregarImagen("img1.jpg");
+            car.agregarImagen("img2.jpg");
+            car.agregarImagen("img3.jpg");
+            car.agregarImagen("img4.jpg");
+          }
           car.setTagId("#carousel");
           car.mostrar();
           car.arrancar();
