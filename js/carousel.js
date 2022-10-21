@@ -36,11 +36,10 @@ class carousel {
     let elem = document.querySelector(this.tagId);
 
 // Inserto los elementos
-    elem.innerHTML = 
-      `<span id="${this.getImgId().slice(1)}">` +
-      `<button id="${this.getPrevId().slice(1)}" onclick="retroceder()"><</button>` +  
-      `<button id="${this.getProxId().slice(1)}" onclick="avanzar()">></button>` + 
-      `</span>`;
+    elem.innerHTML = `<span id="${this.getImgId().slice(1)}">
+                        <button id="${this.getPrevId().slice(1)}" onclick="retroceder()"><</button>
+                        <button id="${this.getProxId().slice(1)}" onclick="avanzar()">></button>
+                      </span>`;
 
 // Inicializo el contenedor de la imagen
     let img = this.getElemImg();
@@ -50,7 +49,17 @@ class carousel {
     img.style.backgroundSize = "cover";
     img.style.backgroundPosition = "center";
     img.style.backgroundRepeat = "no-repeat";
-    img.style.backgroundAttachment = (this.efectoParallax) ? "fixed" : "scroll";
+    // en iOS no funciona bkgSize:"cover" + efectoParallax --> hay que poner "scroll"
+    let browser = window.navigator.userAgent;
+    let esIOS = (browser.includes("iPhone") || browser.includes("iPad"));
+    if (this.efectoParallax && !esIOS){
+      console.log(`Efecto Parallax Activado! (${browser})`);
+      img.style.backgroundAttachment = "fixed";
+    }else{
+      if (this.efectoParallax) {console.log(`Efecto Parallax Desactivado en iOS. (${browser})`);}
+      img.style.backgroundAttachment = "scroll";
+    }
+
     if (this.imgOscurecidas != "#FFFFFF"){
       img.style.background = this.imgOscurecidas;
       img.style.backgroundBlendMode = "multiply";
@@ -93,7 +102,6 @@ class carousel {
 
   mostrar(){
     let elem = this.getElemImg();
-  //  console.log("elem: ", elem);
     elem.style.backgroundImage = `url(${this.imgPath}${this.imagenes[this.imagenActual]})`;
   }
 
